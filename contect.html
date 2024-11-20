@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contect</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Slplayz</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="contect.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contect">
+        <br><br><br>
+        <div class="contect-bg">
+            <br>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTNHCXsjTtsVxPdFXQDbWHbNpgshkpPGpJNjHvzGPLcBNBTDDSFHhcRmwClbswBMtbtPFL" class="mail h2-contect"><ion-icon size="large" name="mail"></ion-icon><h2 class="h2-mail">slplayz20101@gmail.com</h2></a>
+            <br>
+            <a href="https://discord.com/channels/@fireninja5081" class="discord h2-contect"><ion-icon size="large" name="logo-discord"></ion-icon><h2 class="h2-discord">fireninja5081</h2></a>
+            <br>
+            <a id="mynumber" href="#" class="number h2-contect" onclick="copytext(event)"><ion-icon size="large" name="call"></ion-icon><h2 class="h2-phone">+94770231261</h2></a>
+            <br> 
+            <a href="https://www.instagram.com/direct/t/17849103171252856/" class="instagram h2-contect"><ion-icon size="large" name="logo-instagram"></ion-icon><h2 class="h2-instagram">@sanugaherath</h2></a>   
+            <br>
+            <a href="https://x.com/messages/1842825524047187968-1842825524047187968?text=" class="twitter h2-contect"><ion-icon size="large" name="logo-twitter"></ion-icon><h2 class="h2-twitter">@slplayz</h2></a>
+            <br>
+        </div>
+    </section>
+    <div id="copiedMessage" style="display: none; position: absolute; background: #4CAF50; color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px;">Copied!</div>
+
+    <script>
+        function copytext(event) {
+            const text = event.currentTarget.textContent;
+            navigator.clipboard.writeText(text)
+            .then(() => {
+                const message = document.getElementById("copiedMessage");
+                    message.style.display = "block"; 
+                    message.style.top = `${event.clientY}px`; 
+                    message.style.left = `${event.clientX}px`;
+                    setTimeout(() => {
+        message.style.display = "none";
+      }, 2000);
+    }).catch(err => console.error("Error copying link:", err));
+  }
+    </script>
+
+    <a href="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/14/11/20241114113200-IEDTRYTL.json" class="bot"><ion-icon size="large" name="logo-ionitron"></ion-icon></a>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
